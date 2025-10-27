@@ -1,12 +1,9 @@
 
 import DocsSection from './documentation/DocsSection.tsx';
+import DocContent from "./documentation/DocContent.tsx";
+import type {orderProps} from "../models/OrderProps.model.ts";
 
-type orderProps={
-  category: string;
-  title: string;
-  description?: string;
-  icon?: string;
-}
+
 
 export default function ElementsComponent(){
 
@@ -46,7 +43,13 @@ export default function ElementsComponent(){
   ];
 
   return (
-    <section id="documentation" className="wrapper">
+
+
+    <>
+
+        <DocContent order={order} />
+
+    <section id="documentation" className="wrapper style2">
       <div className="inner">
         <header className="major">
           <h2>Components</h2>
@@ -57,6 +60,7 @@ export default function ElementsComponent(){
             <DocsSection key={category.category} icon={category.icon ?? undefined} category={category.category} title={category.title} description={category.description} />
           ))
         }
+
 
         {/*<section>*/}
         {/*  <h4>Text</h4>*/}
@@ -634,5 +638,6 @@ export default function ElementsComponent(){
         {/*</section>*/}
       </div>
     </section>
+    </>
   );
 }

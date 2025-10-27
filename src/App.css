@@ -30,4 +30,41 @@
   justify-content: flex-end;
 }
 
+.table-of-contents {
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+}
+.table-of-contents .single ul {
+  margin: 0;
+  padding: 0;
+}
+.table-of-contents .single ul li {
+  list-style-type: none;
+  padding: 5px;
+  text-decoration: none;
+}
+.table-of-contents .single ul li a {
+  border: none !important;
+}
+.table-of-contents .single .item.header {
+  line-height: 100%;
+  margin: 0;
+  padding: 20px;
+}
+.table-of-contents .single .item {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 1px solid #eeeeee !important;
+}
+.table-of-contents .single li.item:hover {
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=App.css.map */
