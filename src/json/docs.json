@@ -1182,6 +1182,70 @@
     ]
   },
   {
+    "title": "ZenSelect",
+    "description": "A select component with a label. The label is optional. Based on ZenInput.",
+    "category": "Themed Components",
+    "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0",
+    "see": [
+      {
+        "reference": "ZenInput"
+      }
+    ],
+    "params": [
+      {
+        "type": "string[]",
+        "name": "items",
+        "description": "The list of items to select from. This is required"
+      },
+      {
+        "type": "string",
+        "name": "label",
+        "description": "The label for the select component"
+      },
+      {
+        "type": "string",
+        "name": "placeholder",
+        "description": "The placeholder for the select component"
+      },
+      {
+        "type": "string",
+        "name": "dir",
+        "description": "The direction of the text. Can be 'ltr' or 'rtl'. Default is 'ltr'"
+      },
+      {
+        "type": "string",
+        "name": "leftIcon",
+        "description": "The left icon name"
+      },
+      {
+        "type": "Element",
+        "name": "leftAccessory",
+        "description": "The left accessory element"
+      },
+      {
+        "type": "boolean",
+        "name": "disabled",
+        "description": "Whether the select is disabled"
+      },
+      {
+        "type": "string",
+        "name": "type",
+        "description": "The theme type for the select. Default is 'primary'"
+      },
+      {
+        "type": "string",
+        "name": "defaultValue",
+        "description": "The default selected value"
+      },
+      {
+        "type": "Function",
+        "name": "onChange",
+        "description": "Callback function when the selected item changes"
+      }
+    ]
+  },
+  {
     "title": "ZenTextProps",
     "description": "Props for the ZenText component.",
     "category": "Themed Components Props"
