@@ -1,5 +1,12 @@
+import LinksConfig from "../config/Links.config.ts";
+
 export default function IntroComponent(){
-  return (
+
+    const goToGitHub = () => {
+        window.open(LinksConfig.GITHUB_REPO, '_blank', 'opener,referrer');
+    };
+
+    return (
     <section id="intro" className="wrapper style2 special">
       <header className="major">
         <h2>
@@ -26,6 +33,11 @@ export default function IntroComponent(){
             </span>
         </li>
       </ul>
+        <div>
+            <button onClick={goToGitHub}>
+                <i className={'zi-github'}></i> Check it out on GitHub
+            </button>
+        </div>
     </section>
   );
 }
