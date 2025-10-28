@@ -6,9 +6,17 @@
   },
   {
     "title": "ZenDrawer",
-    "description": "A drawer component that can be opened from the left or right side of the screen",
+    "description": "A drawer component that can be opened from the left or right side of the screen. It is controlled by the useDrawer and useToggleDrawer hooks. Works on web and on mobile devices.",
     "category": "Drawer Components",
     "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0",
+    "example": [
+      {
+        "lang": "tsx",
+        "code": "import { ZenDark,\n           ZenThemeProvider,\n           ZenDrawer,\n           ZenDrawerTitle,\n           ZenDrawerItem } from 'react-zen-ui';\n\n  export default function App() {\n\n     const DrawerItems = [\n         <ZenDrawerTitle title={'Main Menu'} key={'title'} />,\n         <ZenDrawerItem\n             label={'Home'}\n             key={'home'}\n             leftIcon={'home'}\n             onPress={() => navigation.navigate('Home' as never)}\n         />,\n         <ZenDrawerItem\n             label={'Theme'}\n             key={'theme'}\n             leftIcon={'settings'}\n             onPress={() => navigation.navigate('Theme' as never)}\n         />,\n         <ZenDrawerItem\n             label={'Drawer'}\n             key={'drawer'}\n             leftIcon={'settings'}\n             onPress={() => navigation.navigate('Drawer' as never)}\n         />,\n         <ZenDrawerTitle title={'Example elements'} key={'example_elements'} />,\n         <ZenDrawerItem\n             label={'Example Car'}\n             key={'example'}\n             leftIcon={'car'}\n             rightIcon={'truck'}\n         />,\n         <ZenDrawerItem\n             label={'Dimensional'}\n             key={'dimensional'}\n             leftIcon={'clock'}\n         />,\n     ];\n\n    const image = require('../assets/logo.png');\n\n    const headerComponent = (props: NativeStackHeaderProps) => (\n      <ZenHeader\n        automaticDrawerIcon={'menu'}\n        showBackButton={props.navigation.canGoBack()}\n        title={props.options.title as string}\n        goBack={()=>{ props.navigation.goBack(); }}\n        {...props}\n      />\n    );\n\n    return (\n         <ZenThemeProvider theme={ZenDark}>\n         <ZenDrawer\n             headerImage={image}\n             headerImageSize={275}\n             items={DrawerItems}\n         />\n          <Stack.Navigator\n            screenOptions={{\n              animation: 'default',\n              headerShown: true,\n              header: headerComponent,\n           }}\n          >\n              // OTHER STACK SCREEN ELEMENTS AND COMPONENTS HERE\n           </Stack.Navigator>\n         </ZenThemeProvider>\n     );\n   }",
+        "closeLang": "tsx"
+      }
+    ],
     "params": [
       {
         "type": "string",
@@ -38,7 +46,7 @@
       {
         "type": "Elements[]",
         "name": "items",
-        "description": "An array of React Elements to display as items in the drawer"
+        "description": "An array of React Elements to display as items in the drawer. Recommended to use ZenDrawerItem and ZenDrawerTitle components."
       },
       {
         "type": "number",
@@ -62,6 +70,15 @@
     "description": "A single item for the ZenDrawer component",
     "category": "Drawer Components",
     "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0",
+    "see": [
+      {
+        "reference": "ZenDrawer"
+      },
+      {
+        "reference": "ZenDrawerTitle"
+      }
+    ],
     "params": [
       {
         "type": "string",
@@ -105,6 +122,15 @@
     "description": "A title component for the ZenDrawer",
     "category": "Drawer Components",
     "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0",
+    "see": [
+      {
+        "reference": "ZenDrawer"
+      },
+      {
+        "reference": "ZenDrawerItem"
+      }
+    ],
     "params": [
       {
         "type": "string",
