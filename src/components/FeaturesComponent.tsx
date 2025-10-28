@@ -85,7 +85,7 @@ export default function FeaturesComponent() {
             </li>
             <li>
               <span className="icon solid fa-sync">
-                <span className="label">Sed vehicula elementum</span>
+                <span className="label">Reusable components</span>
               </span>
             </li>
             <li>
