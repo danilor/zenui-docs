@@ -1135,6 +1135,95 @@
     ]
   },
   {
+    "title": "ZenListItem",
+    "description": "A list item component that can display a title, description, image, and right accessory.",
+    "category": "Themed Components",
+    "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0",
+    "example": [
+      {
+        "lang": "tsx",
+        "code": "import {\n   Layout,\n   Screen,\n   ZenIcon,\n   ZenListItem,\n   ZenSpaceBlock,\n   ZenText,\n } from 'react-zen-ui';\n import { useState } from 'react';\n\n export default function ListScreen() {\n   const [currentTime] = useState(new Date().toLocaleTimeString());\n   const [currentDate] = useState(new Date().toLocaleDateString());\n\n   return (\n     <>\n     <Screen useTopSafeArea={false}>\n         <Layout scrollable={true}>\n\n\n         <ZenListItem title={'Item 1'} />\n         <ZenListItem\n         title={'Item 2 with description'}\n         description={'Description'}\n         rightText={currentTime}\n         />\n\n         <ZenListItem\n         title={'Item 3 with image'}\n         description={'Image will be at the left'}\n         imageSource={{ uri: 'https://picsum.photos/100' }}\n         />\n\n         </Layout>\n     </Screen>\n     </>\n   );\n }",
+        "closeLang": "tsx"
+      }
+    ],
+    "see": [
+      {
+        "reference": "ZenIcon"
+      },
+      {
+        "reference": "ZenText"
+      }
+    ],
+    "params": [
+      {
+        "type": "string",
+        "name": "title",
+        "description": "The title of the list item."
+      },
+      {
+        "type": "string",
+        "name": "description",
+        "description": "The description of the list item."
+      },
+      {
+        "type": "string",
+        "name": "type",
+        "description": "The theme type of the list item."
+      },
+      {
+        "type": "ImageSource",
+        "name": "imageSource",
+        "description": "The source of the image to be displayed on the left side of the list item."
+      },
+      {
+        "type": "number",
+        "name": "height",
+        "description": "The height of the list item."
+      },
+      {
+        "type": "string",
+        "name": "backColor",
+        "description": "The background color of the list item."
+      },
+      {
+        "type": "Function",
+        "name": "onPress",
+        "description": "The function to be called when the list item is pressed."
+      },
+      {
+        "type": "boolean",
+        "name": "disabled",
+        "description": "Whether the list item is disabled."
+      },
+      {
+        "type": "string",
+        "name": "rightText",
+        "description": "The text to be displayed on the right side of the list item."
+      },
+      {
+        "type": "Element",
+        "name": "rightAccessory",
+        "description": "The accessory component to be displayed on the right side of the list item."
+      },
+      {
+        "type": "boolean",
+        "name": "bordered",
+        "description": "Whether the list item has a border."
+      },
+      {
+        "type": "boolean",
+        "name": "squared",
+        "description": "Whether the list item has squared corners."
+      },
+      {
+        "type": "number",
+        "name": "spacing",
+        "description": "The spacing between list items."
+      }
+    ]
+  },
+  {
     "title": "ZenLoadingProps",
     "description": "Props for the ZenLoading component.",
     "category": "Themed Components Props"
