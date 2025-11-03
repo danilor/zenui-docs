@@ -28,6 +28,11 @@ export default function ElementsComponent(){
       title: "Drawer Components",
       description: "Components that provide drawer functionality for navigation and content display.",
     },
+      {
+          category: "Widget Components",
+          title: "Widgets Components",
+          description: "Components that offer specialized functionalities and interactive features.",
+      },
     {
       category: 'Hooks',
       title: "Hooks",

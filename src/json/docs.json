@@ -1391,6 +1391,213 @@
     ]
   },
   {
+    "title": "ZenPlay",
+    "description": "A play button component overlayed on an image, with optional left text and right icon.",
+    "category": "Widget Components",
+    "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0",
+    "example": [
+      {
+        "lang": "tsx",
+        "code": "import {\n  Layout,\n  Screen,\n  ZenPlay,\n  } from 'react-zen-ui';\n  import { StyleSheet } from 'react-native';\n\n  export default function PlayScreen() {\n      const styles = StyleSheet.create({\n        play: {\n          width: 200,\n          height: 200,\n        },\n      });\n\n      const handlePlayPress = () => {\n        console.log('Play button pressed!');\n      };\n\n      return (\n        <>\n          <Screen useTopSafeArea={false}>\n            <Layout centerContent={true}>\n              <ZenPlay\n                style={styles.play}\n                imageSource={{\n                  uri: 'https://example.com/image.jpg',\n                }}\n                onPress={handlePlayPress}\n                icon={'play'}\n                leftText={'Sample Text'}\n                rightIcon={'info'}\n              />\n            </Layout>\n          </Screen>\n        </>\n      );\n  }",
+        "closeLang": "tsx"
+      }
+    ],
+    "params": [
+      {
+        "type": "string",
+        "name": "type",
+        "description": "The theme type for the component (e.g., 'primary', 'secondary')."
+      },
+      {
+        "type": "ImageSource",
+        "name": "imageSource",
+        "description": "The source of the image to display."
+      },
+      {
+        "type": "StyleSheet",
+        "name": "style",
+        "description": "Additional styles for the component container."
+      },
+      {
+        "type": "Function",
+        "name": "onPress",
+        "description": "Function to execute when the play button is pressed."
+      },
+      {
+        "type": "string",
+        "name": "icon",
+        "description": "The name of the icon to display on the play button."
+      },
+      {
+        "type": "string",
+        "name": "leftText",
+        "description": "Optional text to display at the bottom left of the image."
+      },
+      {
+        "type": "boolean",
+        "name": "bordered",
+        "description": "Whether to display a border around the component. Default is false."
+      }
+    ]
+  },
+  {
+    "title": "ZenProfileProps",
+    "description": "Props for the ZenProfile component.",
+    "category": "Widget Components Props"
+  },
+  {
+    "title": "ZenProfile",
+    "description": "A profile component that displays a banner image, an avatar image, a title, a subtitle element, a description, and a footer. The avatar image is positioned overlapping the banner image. The component is styled according to the current theme and supports different types (primary, secondary, success, info, warning, danger).",
+    "category": "Widget Components",
+    "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0",
+    "group": "Widgets",
+    "example": [
+      {
+        "lang": "tsx",
+        "code": "import {\n Layout,\n Screen, ZenButton,\n ZenIcon,\n ZenIconButton,\n ZenSpaceBlock,\n } from 'react-zen-ui';\n import { ZenProfile } from 'react-zen-ui';\n import { StyleSheet, View } from 'react-native';\n\n export default function ProfileScreen() {\n\n     const styles = StyleSheet.create({\n         container: {\n            flexDirection: 'row', gap: 10, alignItems: 'center'\n         }\n     });\n\n     return (\n         <>\n             <Screen useTopSafeArea={false}>\n                 <Layout scrollable={true}>\n                     <ZenSpaceBlock />\n                     <ZenProfile\n                         bannerImageSource={{\n                            uri: 'https://picsum.photos/1000?' + Math.random().toString(36),\n                         }}\n                         avatarImageSource={{\n                            uri: 'https://picsum.photos/id/237/500/500',\n                         }}\n                         title={'Lucky Dog'.toUpperCase()}\n                         subTitleElement={\n                             <View\n                                style={styles.container}\n                             >\n                                 <ZenIcon name={'star'} color={'yellow'} />\n                                 <ZenIcon name={'star'} color={'yellow'} />\n                                 <ZenIcon name={'star'} color={'yellow'} />\n                                 <ZenIcon name={'star'} color={'yellow'} />\n                                 <ZenIcon name={'star'} />\n                             </View>\n                         }\n                         description={\n                            'A friendly dog who loves to play and cuddle with everyone he meets. He is always up for an adventure and enjoys exploring new places.'\n                         }\n                         footer={\n                             <View\n                                 style={styles.container}\n                             >\n                                 <ZenIconButton icon={'facebook'} onPress={()=> null} />\n                             </View>\n                         }\n                     />\n                 </Layout>\n             </Screen>\n         </>\n     );\n }",
+        "closeLang": "tsx"
+      }
+    ],
+    "see": [
+      {
+        "reference": "ZenButton"
+      },
+      {
+        "reference": "ZenIconButton"
+      },
+      {
+        "reference": "ZenIcon"
+      },
+      {
+        "reference": "ZenText"
+      }
+    ],
+    "params": [
+      {
+        "type": "string",
+        "name": "type",
+        "description": "The theme type for the component. Can be 'primary', 'secondary', 'success', 'info', 'warning', or 'danger'. Default is 'primary'."
+      },
+      {
+        "type": "ImageSource",
+        "name": "bannerImageSource",
+        "description": "The source for the banner image."
+      },
+      {
+        "type": "string",
+        "name": "title",
+        "description": "The title of the profile."
+      },
+      {
+        "type": "Element|Element[]",
+        "name": "subTitleElement",
+        "description": "The subtitle element of the profile."
+      },
+      {
+        "type": "boolean",
+        "name": "bordered",
+        "description": "Whether the avatar and banner images should have borders. Default is true."
+      },
+      {
+        "type": "number",
+        "name": "bannerHeight",
+        "description": "The height of the banner image. Default is 150."
+      },
+      {
+        "type": "Element|{number",
+        "name": "description",
+        "description": "The description of the profile."
+      },
+      {
+        "type": "StyleSheet",
+        "name": "style",
+        "description": "Additional styles for the profile container."
+      }
+    ]
+  },
+  {
+    "title": "ZenSpotlight",
+    "description": "A spotlight component that displays an image with an optional footer and an icon button.",
+    "category": "Widget Components",
+    "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0",
+    "group": "Widgets",
+    "example": [
+      {
+        "lang": "tsx",
+        "code": "import { Layout, Screen, ZenSpaceBlock, ZenSpotlight } from 'react-zen-ui';\n import {View} from 'react-native';\n\n export default function SpotlightScreen() {\n   return (\n     <>\n       <Screen useTopSafeArea={false}>\n         <Layout scrollable={true}>\n         <ZenSpaceBlock />\n         <ZenSpotlight footerText={'This image was taken from Picsum'} imageSource={{uri:'https://picsum.photos/300?random'}} bordered={true} borderRounded={true} />\n         </Layout>\n       </Screen>\n     </>\n   );\n }",
+        "closeLang": "tsx"
+      }
+    ],
+    "see": [
+      {
+        "reference": "ZenText"
+      },
+      {
+        "reference": "ZenIconButton"
+      }
+    ],
+    "params": [
+      {
+        "type": "string",
+        "name": "title",
+        "description": "Optional title to be displayed on top of the image."
+      },
+      {
+        "type": "boolean",
+        "name": "titleBackground",
+        "description": "Whether the title should have a background for better visibility. Default is false."
+      },
+      {
+        "type": "string",
+        "name": "titleType",
+        "description": "The text type for the title. Default is 'h3'."
+      },
+      {
+        "type": "ImageSource",
+        "name": "imageSource",
+        "description": "The source of the image to be displayed."
+      },
+      {
+        "type": "string",
+        "name": "footerText",
+        "description": "Optional text to be displayed in the footer."
+      },
+      {
+        "type": "string",
+        "name": "iconName",
+        "description": "The name of the icon to be displayed in the button. Default is 'arrow-right-circle'."
+      },
+      {
+        "type": "string",
+        "name": "type",
+        "description": "The theme type for the component. Default is 'primary'."
+      },
+      {
+        "type": "boolean",
+        "name": "bordered",
+        "description": "Whether the image should have a border. Default is false."
+      },
+      {
+        "type": "boolean",
+        "name": "borderRounded",
+        "description": "Whether the border should be rounded. Default is false."
+      },
+      {
+        "type": "Object",
+        "name": "style",
+        "description": "Additional styles for the container."
+      },
+      {
+        "type": "Function",
+        "name": "onPress",
+        "description": "Function to be called when the icon button is pressed."
+      }
+    ]
+  },
+  {
     "title": "useDrawer",
     "description": "A custom hook to access the current state of the drawer (open or closed) from the ZenThemeContext. Its call must be made inside the context of a ZenThemeProvider.",
     "category": "Hooks",
@@ -1525,6 +1732,29 @@
         "type": "number",
         "name": "light",
         "description": "The light factor (-1 to 1). Negative values darken the color, positive values lighten it."
+      }
+    ]
+  },
+  {
+    "title": "hexToRgb",
+    "description": "Convert a hex color string to an RGB object",
+    "category": "Color Utilities",
+    "return": [
+      {
+        "type": "string|null",
+        "description": "The RGB color string in the format 'rgba(r, g, b, opacity)' or null if the hex string is invalid"
+      }
+    ],
+    "params": [
+      {
+        "type": "string",
+        "name": "hex",
+        "description": "The hex color string"
+      },
+      {
+        "type": "number",
+        "name": "opacity",
+        "description": "The opacity value (0-1)"
       }
     ]
   },
