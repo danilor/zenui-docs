@@ -1331,6 +1331,11 @@
         "type": "Function",
         "name": "onChange",
         "description": "Callback function when the selected item changes"
+      },
+      {
+        "type": "number",
+        "name": "maxNumberOfVisibleItems",
+        "description": "The maximum number of items to show when the select is opened. Default is 3"
       }
     ]
   },
