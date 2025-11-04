@@ -1405,7 +1405,7 @@
     "version": "1.0.0"
   },
   {
-    "title": "Image Slider",
+    "title": "ZenImageSlider",
     "description": "A simple image slider component with pagination.",
     "category": "Widget Components",
     "author": "Danilo Ramírez Mattey",
