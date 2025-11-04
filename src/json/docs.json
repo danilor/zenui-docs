@@ -1391,6 +1391,66 @@
     ]
   },
   {
+    "title": "ZenImageSliderItem",
+    "description": "Props for each item in ZenImageSlider component.",
+    "category": "Widget Components Props",
+    "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0"
+  },
+  {
+    "title": "ZenImageSliderProps",
+    "description": "Props for ZenImageSlider component.",
+    "category": "Widget Components Props",
+    "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0"
+  },
+  {
+    "title": "Image Slider",
+    "description": "A simple image slider component with pagination.",
+    "category": "Widget Components",
+    "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0",
+    "example": [
+      {
+        "lang": "tsx",
+        "code": "import {\n  Layout,\n  Screen,\n  ZenImageSlider,\n  type ZenImageSliderItem,\n  ZenSpaceBlock,\n} from 'react-zen-ui';\n\nexport default function SliderScreen() {\n  const imageBase = 'https://picsum.photos/600?';\n  const images: ZenImageSliderItem[] = [\n    {source:{uri:imageBase + Math.random().toString()}, title: 'Image with Text'},\n    {source:{uri:imageBase + Math.random().toString()}},\n    {source:{uri:imageBase + Math.random().toString()} , title: 'Another Image with Text'},\n    {source:{uri:imageBase + Math.random().toString()}},\n    {source:{uri:imageBase + Math.random().toString()}, onPress: ()=>{}, title:'This image supports onPress action'},\n  ];\n  return (\n    <>\n      <Screen useTopSafeArea={false}>\n        <Layout scrollable={true}>\n          <ZenSpaceBlock />\n          <ZenImageSlider images={images} />\n        </Layout>\n      </Screen>\n    </>\n  );\n}",
+        "closeLang": "tsx"
+      }
+    ],
+    "params": [
+      {
+        "type": "ZenImageSliderItem[]",
+        "name": "images",
+        "description": "Array of images to display. Each image can have a source, optional onPress action, and optional title. Format: { source: any; onPress?: () => void; title?: string; }"
+      },
+      {
+        "type": "string",
+        "name": "type",
+        "description": "Theme type"
+      },
+      {
+        "type": "number",
+        "name": "ratio",
+        "description": "Aspect ratio (width / height)"
+      },
+      {
+        "type": "boolean",
+        "name": "pagination",
+        "description": "Show pagination dots"
+      },
+      {
+        "type": "number",
+        "name": "paginationRelationToImage",
+        "description": "Size of pagination dots in relation to image width"
+      },
+      {
+        "type": "boolean",
+        "name": "bordered",
+        "description": "Show border around the slider"
+      }
+    ]
+  },
+  {
     "title": "ZenPlay",
     "description": "A play button component overlayed on an image, with optional left text and right icon.",
     "category": "Widget Components",
