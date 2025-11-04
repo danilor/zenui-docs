@@ -1417,6 +1417,11 @@
         "closeLang": "tsx"
       }
     ],
+    "snack": [
+      {
+        "id": "@daniloramirezcr/c906b8"
+      }
+    ],
     "params": [
       {
         "type": "ZenImageSliderItem[]",
@@ -1461,6 +1466,11 @@
         "lang": "tsx",
         "code": "import {\n  Layout,\n  Screen,\n  ZenPlay,\n  } from 'react-zen-ui';\n  import { StyleSheet } from 'react-native';\n\n  export default function PlayScreen() {\n      const styles = StyleSheet.create({\n        play: {\n          width: 200,\n          height: 200,\n        },\n      });\n\n      const handlePlayPress = () => {\n        console.log('Play button pressed!');\n      };\n\n      return (\n        <>\n          <Screen useTopSafeArea={false}>\n            <Layout centerContent={true}>\n              <ZenPlay\n                style={styles.play}\n                imageSource={{\n                  uri: 'https://example.com/image.jpg',\n                }}\n                onPress={handlePlayPress}\n                icon={'play'}\n                leftText={'Sample Text'}\n                rightIcon={'info'}\n              />\n            </Layout>\n          </Screen>\n        </>\n      );\n  }",
         "closeLang": "tsx"
+      }
+    ],
+    "snack": [
+      {
+        "id": "@daniloramirezcr/zenui-play-example"
       }
     ],
     "params": [

@@ -1,5 +1,6 @@
 import Scroll from '../../lib/Scroll.ts';
 import CodeExample from '../common/CodeExample.tsx';
+import Snack from "./Snack.tsx";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function DocsSingle(data: any) {
@@ -132,6 +133,21 @@ export default function DocsSingle(data: any) {
           </div>
         </>
       )}
+
+        {data.snack && data.snack.length > 0 && (
+            <>
+            <div className="table-wrapper">
+                <h4>Snacks</h4>
+                {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    data.snack.map((snack: any, index: number) => (
+
+    <Snack id={snack.id} key={`snack-${index}-${data.title}`} />
+                    ))
+                }
+            </div>
+            </>
+        )}
 
       {data.see && data.see.length > 0 && (
         <>
