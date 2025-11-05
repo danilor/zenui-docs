@@ -1391,6 +1391,19 @@
     ]
   },
   {
+    "title": "ZenToast",
+    "description": "A simple toast notification component for displaying brief messages to users. Not intended to be used directly, use the useToast hook instead. To enable the usage of toasts, make sure to wrap your application with the ZenThemeProvider component and pass the \"toast\" parameter as true.",
+    "category": "Utility Components",
+    "see": [
+      {
+        "reference": "useToast"
+      },
+      {
+        "reference": "ZenThemeProvider"
+      }
+    ]
+  },
+  {
     "title": "ZenImageSliderItem",
     "description": "Props for each item in ZenImageSlider component.",
     "category": "Widget Components Props",
@@ -1731,10 +1744,108 @@
     ]
   },
   {
+    "title": "useToast",
+    "description": "A hook to show toast notifications within components. Must be used within a ZenThemeProvider. The first parameter is the message and it is required, the second parameter is the configuration object of type ToastModel and it is optional.",
+    "category": "Hooks",
+    "author": "Danilo Ramírez Mattey",
+    "version": "1.0.0",
+    "return": [
+      {
+        "type": "Function",
+        "description": "The current function to show toast notifications."
+      }
+    ],
+    "see": [
+      {
+        "reference": "ZenThemeProvider"
+      },
+      {
+        "reference": "ToastModel"
+      }
+    ]
+  },
+  {
     "title": "Intro",
     "description": "ZenUI is a React component library that provides a set of customizable and themeable UI components to help developers build modern mobile applications with ease. It offers a variety of components such as buttons, inputs, icons, and layouts, all designed to be responsive and visually appealing. With ZenUI, developers can quickly create beautiful and functional user interfaces while maintaining consistency across their applications.",
     "category": "Documentation",
     "author": "Danilo Ramírez Mattey"
+  },
+  {
+    "title": "ThemeModel",
+    "description": "Model representing a theme with various color properties.",
+    "category": "Models",
+    "params": [
+      {
+        "type": "string",
+        "name": "text",
+        "description": "Color for text elements."
+      },
+      {
+        "type": "string",
+        "name": "background",
+        "description": "Color for background elements."
+      },
+      {
+        "type": "string",
+        "name": "primary",
+        "description": "Primary color used in the theme."
+      },
+      {
+        "type": "string",
+        "name": "secondary",
+        "description": "Secondary color used in the theme."
+      },
+      {
+        "type": "string",
+        "name": "[key:",
+        "description": "string] - Additional color properties can be added as needed."
+      }
+    ]
+  },
+  {
+    "title": "ToastModel",
+    "description": "Model for configuring toast notifications.",
+    "category": "Models",
+    "see": [
+      {
+        "reference": "useToast"
+      },
+      {
+        "reference": "ZenToast"
+      }
+    ],
+    "params": [
+      {
+        "type": "string",
+        "name": "speed",
+        "description": "Speed of the toast animation. Options are 'fast', 'normal', 'slow'. Default is 'normal'."
+      },
+      {
+        "type": "number",
+        "name": "duration",
+        "description": "Duration the toast is visible in milliseconds. Default is 3000."
+      },
+      {
+        "type": "string",
+        "name": "position",
+        "description": "Position of the toast on the screen. Options are 'top' or 'bottom'. Default is 'bottom'."
+      },
+      {
+        "type": "number",
+        "name": "margin",
+        "description": "Margin from the edge of the screen in pixels. Default is 20."
+      },
+      {
+        "type": "number",
+        "name": "transparency",
+        "description": "Transparency level of the toast background. Value between 0 (fully transparent) and 1 (fully opaque). Default is 0.8."
+      },
+      {
+        "type": "string",
+        "name": "type",
+        "description": "Theme type for the toast. Options are theme types defined in ThemeType or 'default'. Default is 'default'."
+      }
+    ]
   },
   {
     "title": "hex2",
