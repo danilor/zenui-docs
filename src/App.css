@@ -67,4 +67,18 @@
   cursor: pointer;
 }
 
+.alert {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.alert.alert-experimental {
+  text-align: center;
+  padding: 10px 5px;
+  background-color: orange;
+  color: white !important;
+  line-height: 200%;
+  border: 1px solid darkorange;
+  border-radius: 10px;
+}
+
 /*# sourceMappingURL=App.css.map */

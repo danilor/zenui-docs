@@ -1394,6 +1394,7 @@
     "title": "ZenToast",
     "description": "A simple toast notification component for displaying brief messages to users. Not intended to be used directly, use the useToast hook instead. To enable the usage of toasts, make sure to wrap your application with the ZenThemeProvider component and pass the \"toast\" parameter as true.",
     "category": "Utility Components",
+    "experimental": "This is a new component and may undergo significant changes in future releases.",
     "see": [
       {
         "reference": "useToast"
@@ -1749,6 +1750,7 @@
     "category": "Hooks",
     "author": "Danilo Ramírez Mattey",
     "version": "1.0.0",
+    "experimental": "This is a new hook and may undergo significant changes in future releases.",
     "return": [
       {
         "type": "Function",
@@ -1761,6 +1763,11 @@
       },
       {
         "reference": "ToastModel"
+      }
+    ],
+    "snack": [
+      {
+        "id": "@daniloramirezcr/zen-ui-toast-example"
       }
     ]
   },

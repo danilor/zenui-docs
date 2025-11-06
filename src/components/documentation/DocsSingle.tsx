@@ -38,7 +38,10 @@ export default function DocsSingle(data: any) {
       </header>
       {data.description && <p className={'justify'}>{data.description}</p>}
 
-      {data.example && data.example.length > 0 && (
+        {data.experimental && <div className={'alert alert-experimental'}><i className="zi-lab"></i> {data.experimental}</div>}
+
+
+        {data.example && data.example.length > 0 && (
         <>
           <h4>Example</h4>
           {

@@ -49,30 +49,33 @@
   border-radius: 12px;
 
   .single {
-    ul{
+    ul {
       margin: 0;
       padding: 0;
-      li{
+
+      li {
         list-style-type: none;
         padding: 5px;
         text-decoration: none;
         //border: none!important;
-        a{
-          border: none!important;
+        a {
+          border: none !important;
         }
       }
     }
-    .item.header{
+
+    .item.header {
       line-height: 100%;
       margin: 0;
       padding: 20px;
     }
+
     .item {
       padding: 5px;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      border-bottom: 1px solid #eeeeee!important;
+      border-bottom: 1px solid #eeeeee !important;
     }
 
     li.item:hover {
@@ -82,6 +85,20 @@
   }
 }
 
+.alert {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  &.alert-experimental {
+    text-align: center;
+    padding: 10px 5px;
+    background-color: orange;
+    color: white !important;
+    line-height: 200%;
+    border: 1px solid darkorange;
+    border-radius: 10px;
+  }
+}
 
 @import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css";
 @import "assets/css/main.css";
