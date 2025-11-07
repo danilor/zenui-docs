@@ -897,6 +897,72 @@
     ]
   },
   {
+    "title": "ZenChips",
+    "description": "A simple chip component to display a small piece of information.",
+    "category": "Themed Components",
+    "version": "1.0.0",
+    "example": [
+      {
+        "lang": "tsx",
+        "code": "import {\n   Layout,\n   Screen,\n   ZenIcon,\n   ZenListItem,\n   ZenSpaceBlock,\n   ZenChips,\n } from 'react-zen-ui';\n import { useState } from 'react';\n\n export default function ListScreen() {\n   const [currentTime] = useState(new Date().toLocaleTimeString());\n   const [currentDate] = useState(new Date().toLocaleDateString());\n\n   return (\n     <>\n     <Screen useTopSafeArea={false}>\n         <Layout scrollable={true}>\n\n\n         <View style={styles.chipsContainer}>\n            <ZenChips type={'primary'} text={'Primary'} />\n            <ZenChips type={'warning'} text={'Warning'} />\n            <ZenChips type={'success'} text={'Success'} />\n            <ZenChips type={'info'} text={'Info'} />\n            <ZenChips type={'danger'} text={'Danger'} />\n          </View>\n\n         </Layout>\n     </Screen>\n     </>\n   );\n }\nconst styles = StyleSheet.create({\n  chipsContainer: {\n    display: 'flex',\n    flexDirection: 'row',\n    gap: 10,\n    flexWrap: 'wrap',\n    justifyContent: 'space-between',\n    alignItems: 'center',\n    marginBottom: 20,\n  },\n});",
+        "closeLang": "tsx"
+      }
+    ],
+    "see": [
+      {
+        "reference": "ZenText"
+      },
+      {
+        "reference": "ZenIcon"
+      },
+      {
+        "reference": "ZenButton"
+      }
+    ],
+    "params": [
+      {
+        "type": "string",
+        "name": "type",
+        "description": "The theme type to use. Default is 'default'."
+      },
+      {
+        "type": "string",
+        "name": "text",
+        "description": "The text to display inside the chip. Default is 'Chip'."
+      },
+      {
+        "type": "boolean",
+        "name": "rounded",
+        "description": "Whether the chip should have rounded corners. Default is true."
+      },
+      {
+        "type": "boolean",
+        "name": "ghost",
+        "description": "Whether the chip should have a ghost style (transparent background). Default is false."
+      },
+      {
+        "type": "Function",
+        "name": "onPress",
+        "description": "Function to execute when the chip is pressed."
+      },
+      {
+        "type": "StyleSheet",
+        "name": "style",
+        "description": "Additional styles to apply to the chip container."
+      },
+      {
+        "type": "string",
+        "name": "leftIcon",
+        "description": "Name of the left icon to display inside the chip."
+      },
+      {
+        "type": "string",
+        "name": "rightIcon",
+        "description": "Name of the right icon to display inside the chip."
+      }
+    ]
+  },
+  {
     "title": "ZenCode",
     "description": "A simple code block component that can be used to display code snippets throughout the app. It styles the code block according to the current theme.",
     "category": "Themed Components",
